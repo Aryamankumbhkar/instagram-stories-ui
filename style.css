@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-family: system-ui;
+  background: conic-gradient(at right bottom, pink, red, pink);
+}
+
+
+.story-container {
+  height: 100vh;
+  width: 380px;
+  /* background-color: wheat; */
+  margin: auto;
+  /* flex-shrink: 0; */
+  position: relative;
+  overflow: hidden;
+  /* margin: 70px 0; */
+  /* margin: 10vh 0; */
+  /* border-radius: 8px; */
+}
+
+.story-card {
+  height: 90vh;
+  width: 100%;
+  background-color: whitesmoke;
+  position: absolute;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  /* padding: 7 0px 0; */
+  /* padding: 10px; */
+  margin: 10px 0;
+  border-radius: 8px;
+  /* cursor: pointer; */
+}
+
+.story-card::-webkit-scrollbar {
+  display: none;
+}
+.story-card .stories {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  /* margin-bottom: 10px; */
+}
+
+.story-card .stories video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.stories .bottom {
+  padding: 10px 20px 20px 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.257);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 10 0  20px 20px;
+   cursor: pointer;
+}
+
+.bottom .user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bottom .user .userImage {
+  height: 30px;
+  width: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bottom .user .userImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.bottom .user h4 {
+  font-size: 0.90rem;
+  white-space: nowrap;
+  font-weight: 500;
+  cursor: pointer;
+  /* gap: 100px; */
+  /* color: red; */
+  margin-right: 10px;
+}
+.user button {
+  display: inline-block;
+  align-items: center;
+  justify-items: center;
+
+  /* width: 50px; */
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1rem;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 6px;
+  min-width: 90px;
+ transition: all 0.3s ease-in-out;
+
+}
+.follow-active {
+  font-size: 1rem;
+  padding: 1px 8px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.bottom h6 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.stories .rightIcons {
+  height: 100%;
+  width: 50px;
+  /* background-color: rgba(144, 122, 122, 0.261); */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.rightIcons h4 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.liked {
+  color: red !important; 
+  transform: scale(1.2);
+  transition: all 0.2s linear; 
+}
+.like-active {
+  background-color: #444 !important; 
+  color: #fff !important; 
+  border: 1px solid #777;
+}
+
+.rightIcons h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
