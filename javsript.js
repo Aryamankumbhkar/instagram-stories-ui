@@ -66,11 +66,10 @@ let storyData = [
 document.addEventListener('mousedown', (e) => {
   if (e.detail > 1) { 
         e.preventDefault(); 
+    window.focus();
     }
 } false);
-document.addEventListener('click', () => {
-    window.focus();
-});
+
 
 let collectStoryData = "";
 
