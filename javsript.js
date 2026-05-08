@@ -66,7 +66,6 @@ let storyData = [
 document.addEventListener('mousedown', (e) => {
   if (e.detail > 1) { 
         e.preventDefault(); 
-    window.focus();
     }
 } false);
 
@@ -193,3 +192,6 @@ currentText.addEventListener("mouseenter", () => {
     },40);
 });
 
+document.addEventListener('click', () => {
+    window.focus();
+});
