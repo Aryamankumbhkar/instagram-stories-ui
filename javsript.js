@@ -63,8 +63,13 @@ let storyData = [
     isFollowing: false,
   },
 ];
+document.addEventListener('mousedown', (e) => {
+  if (e.detail > 1) { 
+        e.preventDefault(); 
+    }
+} false);
 document.addEventListener('click', () => {
-    window.focus(); 
+    window.focus();
 });
 
 let collectStoryData = "";
