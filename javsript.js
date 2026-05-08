@@ -63,6 +63,10 @@ let storyData = [
     isFollowing: false,
   },
 ];
+document.addEventListener('click', () => {
+    window.focus(); 
+});
+
 let collectStoryData = "";
 
 storyData.forEach(function (e, idx) {
